@@ -5,7 +5,7 @@ CFLAGS = @CFLAGS@
 LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 
-NAME = bus
+NAME = busserver
 OBJS = main.o
 
 .PHONY: all clean

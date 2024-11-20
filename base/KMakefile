@@ -13,4 +13,4 @@ if()
 endif()
 
 output("Makefile")
-output("FBBus/Makefile")
+output("BusServer/Makefile")

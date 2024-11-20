@@ -5,7 +5,9 @@ CFLAGS = @CFLAGS@
 LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 
-.PHONY: all clean distclean String Bus UI
+BUILD = String Bus UI
+
+.PHONY: all clean distclean $(BUILD)
 
 all: String Bus UI
 
@@ -22,7 +24,7 @@ distclean: clean
 	rm -f Makefile */Makefile config.h
 
 clean:
-	$(MAKE) -C ./String clean
-	$(MAKE) -C ./Bus clean
-	$(MAKE) -C ./UI clean
+	for i in $(BUILD); do \
+		$(MAKE) -C $$i clean ; \
+	done
 	rm -rf Library

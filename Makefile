@@ -1,6 +1,6 @@
 # $Id$
 
-.PHONY: all distclean clean ./base ./libs
+.PHONY: all distclean install clean ./base ./libs
 
 all: ./libs ./base
 
@@ -19,6 +19,10 @@ all: ./libs ./base
 clean:
 	-$(MAKE) -C ./base clean
 	-$(MAKE) -C ./libs clean
+
+install: all
+	$(MAKE) -C ./base install
+	$(MAKE) -C ./libs install
 
 distclean:
 	-$(MAKE) -C ./base distclean

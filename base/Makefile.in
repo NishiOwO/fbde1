@@ -5,7 +5,9 @@ CFLAGS = @CFLAGS@
 LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 
-.PHONY: all clean distclean FBBus
+BUILD = FBBus
+
+.PHONY: all clean distclean $(BUILD)
 
 all: FBBus
 
@@ -16,5 +18,7 @@ distclean: clean
 	rm -f Makefile */Makefile config.h
 
 clean:
-	$(MAKE) -C ./FBBus clean
+	for i in $(BUILD); do \
+		$(MAKE) -C $$i clean ; \
+	done
 	rm -rf ./Binary
