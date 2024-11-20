@@ -1,0 +1,24 @@
+# $Id$
+
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+
+NAME = bus
+OBJS = main.o
+
+.PHONY: all clean
+.SUFFIXES: .c .o
+
+all: ../Binary/fb$(NAME)
+
+../Binary/fb$(NAME): $(OBJS)
+	mkdir -p ../Binary
+	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f ../Binary/fb$(NAME) *.o

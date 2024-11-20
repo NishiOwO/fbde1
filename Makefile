@@ -4,7 +4,7 @@
 
 all: ./libs ./base
 
-./base/Makefile: ./libs
+./base/Makefile:
 	cd base && ./configure $(ARGS)
 
 ./libs/Makefile:

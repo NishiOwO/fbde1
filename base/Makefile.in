@@ -1,0 +1,20 @@
+# $Id$
+
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+
+.PHONY: all clean distclean FBBus
+
+all: FBBus
+
+FBBus::
+	$(MAKE) -C $@
+
+distclean: clean
+	rm -f Makefile */Makefile config.h
+
+clean:
+	$(MAKE) -C ./FBBus clean
+	rm -rf ./Binary

@@ -271,3 +271,4 @@ LDFLAGS="$LDFLAGS -Wl,-R/usr/pkg/lib -Wl,-R/usr/X11R7/lib -L/usr/pkg/lib -L/usr/
 fi
 EXECIF=1
 output_as "Makefile"
+output_as "FBBus/Makefile"
