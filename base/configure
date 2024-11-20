@@ -256,7 +256,7 @@ else
 	EXECIF=1
 fi
 CFLAGS="$CFLAGS -I../../libs/Include"
-LDFLAGS="$LDFLAGS -L../../libs/Library"
+LDFLAGS="$LDFLAGS -L../../libs/Library -L${PREFIX}/lib -Wl,-R${PREFIX}/lib"
 echo -n "Checking if the OS is NetBSD... "
 test "$OS" = "NetBSD"
 EXECIF=$?
