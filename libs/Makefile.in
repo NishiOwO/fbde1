@@ -1,0 +1,25 @@
+# $Id$
+
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+
+.PHONY: all clean distclean String Bus UI
+
+all: String Bus UI
+
+String::
+	$(MAKE) -C $@
+
+Bus::
+	$(MAKE) -C $@
+
+UI::
+	$(MAKE) -C $@
+
+distclean: clean
+	rm -f Makefile */Makefile config.h
+
+clean:
+	rm -f */*.so */*.o
