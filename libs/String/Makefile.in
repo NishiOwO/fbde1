@@ -6,7 +6,7 @@ LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 
 NAME = string
-OBJS =
+OBJS = strcat.o strdup.o
 
 .PHONY: all clean
 .SUFFIXES: .c .o

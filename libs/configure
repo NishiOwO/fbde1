@@ -255,6 +255,7 @@ if [ ! "x$PKGCONF" = "x" ]; then
 else
 	EXECIF=1
 fi
+CFLAGS="$CFLAGS -I../Include"
 echo -n "Checking if the OS is NetBSD... "
 test "$OS" = "NetBSD"
 EXECIF=$?

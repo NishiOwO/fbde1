@@ -6,7 +6,7 @@ LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 
 NAME = bus
-OBJS =
+OBJS = unix.o manager.o
 
 .PHONY: all clean
 .SUFFIXES: .c .o

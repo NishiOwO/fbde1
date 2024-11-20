@@ -6,7 +6,7 @@ LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 
 NAME = ui
-OBJS =
+OBJS = motif.o
 
 .PHONY: all clean
 .SUFFIXES: .c .o
