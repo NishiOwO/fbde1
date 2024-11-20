@@ -20,6 +20,8 @@ distclean: clean
 install: all
 	mkdir -p @PREFIX@/lib
 	cp -rf Library/* @PREFIX@/lib/
+	mkdir -p @PREFIX@/include
+	cp -rf Include/* @PREFIX@/include/
 
 clean:
 	for i in $(BUILD); do \
