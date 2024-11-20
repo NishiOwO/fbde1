@@ -17,7 +17,7 @@ libfb$(NAME).so: $(OBJS)
 	$(CC) $(LDFLAGS) -shared -o $@ $(OBJS) $(LIBS)
 
 .c.o:
-	$(CC) $(CFLAGS) -fPIC -o $@ $<
+	$(CC) $(CFLAGS) -c -fPIC -o $@ $<
 
 clean:
 	rm -f *.so *.o
