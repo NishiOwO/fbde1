@@ -7,7 +7,7 @@ LIBS = @LIBS@
 
 BUILD = BusServer
 
-.PHONY: all clean distclean $(BUILD)
+.PHONY: all clean install distclean $(BUILD)
 
 all: $(BUILD)
 
@@ -16,6 +16,10 @@ $(BUILD)::
 
 distclean: clean
 	rm -f Makefile */Makefile config.h
+
+install: all
+	mkdir -p @PREFIX@/bin
+	cp -rf Binary/* @PREFIX@/bin/
 
 clean:
 	for i in $(BUILD); do \

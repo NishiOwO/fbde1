@@ -7,7 +7,7 @@ LIBS = @LIBS@
 
 BUILD = String Bus UI
 
-.PHONY: all clean distclean $(BUILD)
+.PHONY: all clean install distclean $(BUILD)
 
 all: $(BUILD)
 
@@ -16,6 +16,10 @@ $(BUILD)::
 
 distclean: clean
 	rm -f Makefile */Makefile config.h
+
+install: all
+	mkdir -p @PREFIX@/lib
+	cp -rf Library/* @PREFIX@/lib/
 
 clean:
 	for i in $(BUILD); do \
