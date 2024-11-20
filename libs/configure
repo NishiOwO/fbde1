@@ -362,3 +362,6 @@ fi
 fi
 EXECIF=1
 output_as "Makefile"
+output_as "String/Makefile"
+output_as "Bus/Makefile"
+output_as "UI/Makefile"

@@ -54,3 +54,6 @@ else()
 endif()
 
 output("Makefile")
+output("String/Makefile")
+output("Bus/Makefile")
+output("UI/Makefile")

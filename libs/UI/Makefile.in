@@ -1,0 +1,23 @@
+# $Id$
+
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+
+NAME = ui
+OBJS =
+
+.PHONY: all clean
+.SUFFIXES: .c .o
+
+all: libfb$(NAME).so
+
+libfb$(NAME).so: $(OBJS)
+	$(CC) $(LDFLAGS) -shared -o $@ $(OBJS) $(LIBS)
+
+.c.o:
+	$(CC) $(CFLAGS) -fPIC -o $@ $<
+
+clean:
+	rm -f *.so *.o
