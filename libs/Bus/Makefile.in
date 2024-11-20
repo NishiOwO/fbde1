@@ -11,13 +11,14 @@ OBJS = manager.o util.o
 .PHONY: all clean
 .SUFFIXES: .c .o
 
-all: libfb$(NAME).so
+all: ../Library/libfb$(NAME).so
 
-libfb$(NAME).so: $(OBJS)
+../Library/libfb$(NAME).so: $(OBJS)
+	mkdir -p ../Library
 	$(CC) $(LDFLAGS) -shared -o $@ $(OBJS) $(LIBS)
 
 .c.o:
 	$(CC) $(CFLAGS) -c -fPIC -o $@ $<
 
 clean:
-	rm -f *.so *.o
+	rm -f ../Library/*.so *.o

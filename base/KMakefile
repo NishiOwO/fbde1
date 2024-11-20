@@ -1,0 +1,15 @@
+# $Id$
+# vim: syntax=plain
+have_config_h()
+init()
+probe_cc("gcc", "clang", "cc")
+probe_pkgconf("pkg-config")
+shell("CFLAGS=\"$CFLAGS -I../../libs/Include\"")
+shell("LDFLAGS=\"$LDFLAGS -L../../libs/Library\"")
+cond_os("NetBSD")
+if()
+	shell("CFLAGS=\"$CFLAGS -I/usr/pkg/include -I/usr/X11R7/include\"")
+	shell("LDFLAGS=\"$LDFLAGS -Wl,-R/usr/pkg/lib -Wl,-R/usr/X11R7/lib -L/usr/pkg/lib -L/usr/X11R7/lib\"")
+endif()
+
+output("Makefile")

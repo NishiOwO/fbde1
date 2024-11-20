@@ -22,4 +22,7 @@ distclean: clean
 	rm -f Makefile */Makefile config.h
 
 clean:
-	rm -f */*.so */*.o
+	$(MAKE) -C ./String clean
+	$(MAKE) -C ./Bus clean
+	$(MAKE) -C ./UI clean
+	rm -rf Library
