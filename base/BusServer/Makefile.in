@@ -3,7 +3,7 @@
 CC = @CC@
 CFLAGS = @CFLAGS@
 LDFLAGS = @LDFLAGS@
-LIBS = @LIBS@
+LIBS = @LIBS@ -lfbbus
 
 NAME = busserver
 OBJS = main.o

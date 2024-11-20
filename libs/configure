@@ -325,7 +325,7 @@ c_check_header "X11/Xlib.h"
 c_check_header "X11/Xutil.h"
 c_check_header "stdlib.h"
 c_check_header "sys/socket.h"
-c_check_header "netinet/in.h"
+c_check_header "sys/un.h"
 c_check_header "sys/poll.h" "1"
 EXECIF=$?
 if [ ! "$EXECIF" = "0" ]; then
