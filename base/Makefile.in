@@ -18,8 +18,8 @@ distclean: clean
 	rm -f Makefile */Makefile config.h
 
 install: all
-	mkdir -p @PREFIX@/bin
-	cp -rf Binary/* @PREFIX@/bin/
+	mkdir -p $(DESTDIR)/@PREFIX@/bin
+	cp -rf Binary/* $(DESTDIR)/@PREFIX@/bin/
 
 clean:
 	for i in $(BUILD); do \

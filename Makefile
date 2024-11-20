@@ -1,8 +1,12 @@
 # $Id$
 
-.PHONY: all distclean install clean ./base ./libs
+DESTDIR=
 
-all: ./libs ./base
+BUILD = ./base ./libs
+
+.PHONY: all distclean install clean $(BUILD)
+
+all: $(BUILD)
 
 ./base/Makefile:
 	cd base && ./configure $(ARGS)
@@ -17,13 +21,16 @@ all: ./libs ./base
 	$(MAKE) -C $@
 
 clean:
-	-$(MAKE) -C ./base clean
-	-$(MAKE) -C ./libs clean
+	for i in $(BUILD); do \
+		$(MAKE) -C $$i clean ; \
+	done
 
 install: all
-	$(MAKE) -C ./base install
-	$(MAKE) -C ./libs install
+	for i in $(BUILD); do \
+		$(MAKE) -C $$i install DESTDIR=$(DESTDIR) ; \
+	done
 
 distclean:
-	-$(MAKE) -C ./base distclean
-	-$(MAKE) -C ./libs distclean
+	for i in $(BUILD); do \
+		$(MAKE) -C $$i distclean DESTDIR=$(DESTDIR) ; \
+	done
