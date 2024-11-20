@@ -9,15 +9,9 @@ BUILD = String Bus UI
 
 .PHONY: all clean distclean $(BUILD)
 
-all: String Bus UI
+all: $(BUILD)
 
-String::
-	$(MAKE) -C $@
-
-Bus::
-	$(MAKE) -C $@
-
-UI::
+$(BUILD)::
 	$(MAKE) -C $@
 
 distclean: clean

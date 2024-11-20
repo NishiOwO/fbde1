@@ -5,13 +5,13 @@ CFLAGS = @CFLAGS@
 LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
 
-BUILD = FBBus
+BUILD = BusServer
 
 .PHONY: all clean distclean $(BUILD)
 
-all: FBBus
+all: $(BUILD)
 
-FBBus::
+$(BUILD)::
 	$(MAKE) -C $@
 
 distclean: clean
