@@ -191,7 +191,7 @@ cxx_check_header() {
 	echo -n "Checking if $1 exists... "
 	echo "#include <$1>" > /tmp/$$.cpp
 	echo "int main(int argc, char** argv){return 0;}" >> /tmp/$$.c
-	$CXX $CXXFLAGS -c -o /dev/null /tmp/$$.c >/dev/null 2>&1
+	$CXX $CXXFLAGS -c -o /dev/null /tmp/$$.c >/dev/null
 	if [ "$?" = "0" ]; then
 		echo "yes"
 		if [ "x$2" = "x1" ]; then			rm /tmp/$$.c

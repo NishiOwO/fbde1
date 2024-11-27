@@ -15,7 +15,7 @@ all: ../Binary/fb$(NAME)
 
 ../Binary/fb$(NAME): $(OBJS)
 	mkdir -p ../Binary
-	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS) -lfbbus
 
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $<
