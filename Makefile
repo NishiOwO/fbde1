@@ -2,7 +2,7 @@
 
 DESTDIR=
 
-BUILD = ./base ./libs
+BUILD = ./base ./libs ./docs
 
 .PHONY: all distclean install clean $(BUILD)
 
@@ -18,6 +18,9 @@ all: $(BUILD)
 	$(MAKE) -C $@
 
 ./libs:: ./libs/Makefile
+	$(MAKE) -C $@
+
+./docs::
 	$(MAKE) -C $@
 
 clean:
