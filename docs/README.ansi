@@ -5,9 +5,9 @@
 
 
 
-                           [1mREADME[0m
+                           RREEAADDMMEE
 
-              [1mfor FooBar Desktop Environment 1[0m
+              ffoorr FFooooBBaarr DDeesskkttoopp EEnnvviirroonnmmeenntt 11
 
 
               Copyright (c) FBDE Contributors.
@@ -70,7 +70,7 @@
                              ‐2‐
 
 
-                          [4mABSTRACT[0m
+                          _A_B_S_T_R_A_C_T
 
 This document contains instructions for the installations of the FBDE1.
 
@@ -137,9 +137,9 @@ This document contains instructions for the installations of the FBDE1.
 
 
 
-                         [1m1. License[0m
+                         11.. LLiicceennssee
 
-FBDE1 is licensed under the [1mMPL‐2.0 [22mlicense, including this document.
+FBDE1 is licensed under the MMPPLL‐‐22..00 license, including this document.
 
 
 
@@ -665,9 +665,9 @@ FBDE1 is licensed under the [1mMPL‐2.0 [22mlicense, including this document.
 
 
 
-                [1m2. Obtaining the source code[0m
+                22.. OObbttaaiinniinngg tthhee ssoouurrccee ccooddee
 
-Source code can be obtained using [4mSubverison[24m from http://svn.nishi.boats/repo/fbde1 .
+Source code can be obtained using _S_u_b_v_e_r_i_s_o_n from http://svn.nishi.boats/repo/fbde1 .
 
 
 
@@ -731,21 +731,21 @@ Source code can be obtained using [4mSubverison[24m from http://svn.nishi.boat
 
 
 
-                    [1m3. Directory layout[0m
+                    33.. DDiirreeccttoorryy llaayyoouutt
 
 
 
-┌─────────────────────┬─────────────────────────────────────┐
-│        [1mName         [22m│          [1mDescription                [22m│
+┌─────────────────────┼─────────────────────────────────────┐
+│        NNaammee                    DDeessccrriippttiioonn                │
 ├─────────────────────┌─────────────────────────────────────┤
 │       /trunk        │       FBDE1 (unstable).             │
-│   /tags/[4mversion[24m     │       FBDE1 ([4mversion[24m).              │
+│   /tags/_v_e_r_s_i_o_n     │       FBDE1 (_v_e_r_s_i_o_n).              │
 ├─────────────────────┌─────────────────────────────────────┤
 │    /trunk/libs      │  FBDE1 Libraries (unstable).        │
-│ /tags/[4mversion/libs[24m  │  FBDE1 Libraries ([4mversion[24m).         │
+│ /tags/_v_e_r_s_i_o_n_/_l_i_b_s  │  FBDE1 Libraries (_v_e_r_s_i_o_n).         │
 ├─────────────────────┌─────────────────────────────────────┤
 │    /trunk/base      │    FBDE1 Base (unstable).           │
-│ /tags/[4mversion/base[24m  │     FBDE1 Base ([4mversion[24m).           │
+│ /tags/_v_e_r_s_i_o_n_/_b_a_s_e  │     FBDE1 Base (_v_e_r_s_i_o_n).           │
 └─────────────────────┴─────────────────────────────────────┘
 
 
@@ -797,30 +797,30 @@ Source code can be obtained using [4mSubverison[24m from http://svn.nishi.boat
 
 
 
-                        [1m4. Building[0m
+                        44.. BBuuiillddiinngg
 
 
 
-                  [1m4.1. Supported platforms[0m
+                  44..11.. SSuuppppoorrtteedd ppllaattffoorrmmss
 
 
-┌───────────────────────────┬───────────────────────────────┐
-│       [1mPlatform            [22m│       [1mStatus                  [22m│
-├───────────────────────────┌───────────────────────────────┤
-│   NetBSD/amd64 10.0       │    Main support               │
+┌───────────────────────────┼───────────────────────────────┐
+│       PPllaattffoorrmm                    SSttaattuuss                  │
+├───────────────────────────├───────────────────────────────┤
+│   NetBSD/amd64 10.0            Main support               │
 ├───────────────────────────┌───────────────────────────────┤
 │  Debian GNU/Linux 12      │    Main support               │
 └───────────────────────────┴───────────────────────────────┘
 
 
-                    [1m4.2. How to compile[0m
+                    44..22.. HHooww ttoo ccoommppiillee
 
-Run make or make ARGS=‐‐prefix=[4mprefix[24m to build. Both [1mBSD make [22mand [1mGNU make [22mwork.
+Run make or make ARGS=‐‐prefix=_p_r_e_f_i_x to build. Both BBSSDD mmaakkee and GGNNUU mmaakkee work.
 
 
-                    [1m4.3. How to install[0m
+                    44..33.. HHooww ttoo iinnssttaallll
 
-Run make install or make install DESTDIR=[4mdestdir[24m to install.
+Run make install or make install DESTDIR=_d_e_s_t_d_i_r to install.
 
 
 
